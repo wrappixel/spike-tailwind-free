@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html   lang="en" >
+
+<head>
+	@@include("../partials/head.html")
+	<title>Spike TailwindCSS HTML Admin Template</title>
+</head>
+
+<body class=" bg-surface">
+	<main>
+		<!--start the project-->
+		<div id="main-wrapper" class=" flex p-5 min-h-screen">
+			<aside id="application-sidebar-brand"
+				class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full  transform hidden xl:block xl:translate-x-0 xl:end-auto xl:bottom-0 fixed xl:top-5 xl:left-auto top-0 left-0 with-vertical h-screen z-[999] shrink-0  w-[270px] shadow-md xl:rounded-md rounded-none bg-white left-sidebar   transition-all duration-300" >
+				@@include("../partials/sidebar.html")
+			</aside>
+			<div class=" w-full page-wrapper px-4 overflow-hidden">
+
+				<!-- Main Content -->
+				<main class="h-full overflow-y-auto  max-w-full">
+					<div class="container full-container p-0 flex flex-col gap-6">
+					<!--  Header Start -->
+				<header class=" bg-white shadow-md rounded-md w-full text-sm py-4 px-6">
+					@@include("../partials/header.html")
+				</header>
+				<!--  Header End -->
+				<div class="card">
+					<div class="card-body">
+						<h6 class="text-lg text-gray-500 font-semibold mb-6">Sample Page</h6>
+						<p class="text-sm text-gray-400">This is a sample page</p>
+							</div>
+						</div>              
+					</div>
+
+
+				</main>
+				<!-- Main Content End -->
+				
+			</div>
+		</div>
+		<!--end of project-->
+	</main>
+
+
+	@@include("../partials/scripts.html")
+
+</body>
+
+</html>
