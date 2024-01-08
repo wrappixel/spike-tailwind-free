@@ -103,7 +103,7 @@ $(function () {
     // =====================================
     var grade = {
       series: [5368, 3500, 4106],
-      labels: ["5368", "Refferal Traffic", "Oragnic Traffic"],
+      labels: ["Other", "Refferal", "Oragnic"],
       chart: {
         height: 170,
         type: "donut",
