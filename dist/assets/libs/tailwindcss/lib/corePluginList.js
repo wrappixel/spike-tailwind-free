@@ -185,6 +185,7 @@ const _default = [
     "transitionDuration",
     "transitionTimingFunction",
     "willChange",
+    "contain",
     "content",
     "forcedColorAdjust"
 ];

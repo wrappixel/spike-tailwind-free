@@ -166,18 +166,13 @@ let state = {
         // Resolve globs from the content config
         // TODO: When we make the postcss plugin async-capable this can become async
         let files = _fastglob.default.sync(this.contentPatterns.all);
+        let checkBroadPattern = (0, _content.createBroadPatternCheck)(this.contentPatterns.all);
         for (let file of files){
-            if (false) {
-                content.push({
-                    file,
-                    extension: _path.default.extname(file).slice(1)
-                });
-            } else {
-                content.push({
-                    content: _fs.default.readFileSync(_path.default.resolve(file), "utf8"),
-                    extension: _path.default.extname(file).slice(1)
-                });
-            }
+            checkBroadPattern(file);
+            content.push({
+                content: _fs.default.readFileSync(_path.default.resolve(file), "utf8"),
+                extension: _path.default.extname(file).slice(1)
+            });
         }
         // Resolve raw content in the tailwind config
         let rawContent = this.config.content.files.filter((file)=>{
@@ -284,7 +279,7 @@ async function createProcessor(args, cliConfigPath) {
         if (input) {
             return _fs.default.promises.readFile(_path.default.resolve(input), "utf8");
         }
-        // No input file provided, fallback to default atrules
+        // No input file provided, fallback to default at-rules
         return "@tailwind base; @tailwind components; @tailwind utilities";
     }
     async function build() {

@@ -8,10 +8,13 @@
 
 <body class=" bg-surface">
 	<main>
+		<div class="app-topstrip z-40 sticky top-0 py-[15px] px-6 bg-[linear-gradient(90deg,_#0f0533_0%,_#1b0a5c_100%)]">
+			@@include("../partials/app-topstrip.html")
+		</div>
 		<!--start the project-->
 		<div id="main-wrapper" class=" flex p-5 xl:pr-0 min-h-screen">
 			<aside id="application-sidebar-brand"
-				class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full  transform hidden xl:block xl:translate-x-0 xl:end-auto xl:bottom-0 fixed xl:top-5 xl:left-auto top-0 left-0 with-vertical h-screen z-[999] shrink-0  w-[270px] shadow-md xl:rounded-md rounded-none bg-white left-sidebar   transition-all duration-300">
+				class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full  transform hidden xl:block xl:translate-x-0 xl:end-auto xl:bottom-0 fixed xl:top-[90px] xl:left-auto top-0 left-0 with-vertical h-screen z-[999] shrink-0  w-[270px] shadow-md xl:rounded-md rounded-none bg-white left-sidebar   transition-all duration-300">
 				@@include("../partials/sidebar.html")
 			</aside>
 			<div class=" w-full page-wrapper xl:px-6 px-0 ">

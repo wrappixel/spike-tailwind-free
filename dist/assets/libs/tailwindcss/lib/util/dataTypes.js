@@ -12,6 +12,9 @@ _export(exports, {
     normalize: function() {
         return normalize;
     },
+    normalizeAttributeSelectors: function() {
+        return normalizeAttributeSelectors;
+    },
     url: function() {
         return url;
     },
@@ -77,6 +80,7 @@ function isCSSFunction(value) {
 // More info:
 // - https://drafts.csswg.org/scroll-animations/#propdef-timeline-scope
 // - https://developer.mozilla.org/en-US/docs/Web/CSS/timeline-scope#dashed-ident
+// - https://www.w3.org/TR/css-anchor-position-1
 //
 const AUTO_VAR_INJECTION_EXCEPTIONS = new Set([
     // Concrete properties
@@ -84,10 +88,15 @@ const AUTO_VAR_INJECTION_EXCEPTIONS = new Set([
     "timeline-scope",
     "view-timeline-name",
     "font-palette",
+    "anchor-name",
+    "anchor-scope",
+    "position-anchor",
+    "position-try-options",
     // Shorthand properties
     "scroll-timeline",
     "animation-timeline",
-    "view-timeline"
+    "view-timeline",
+    "position-try"
 ]);
 function normalize(value, context = null, isRoot = true) {
     let isVarException = context && AUTO_VAR_INJECTION_EXCEPTIONS.has(context.property);
@@ -110,6 +119,25 @@ function normalize(value, context = null, isRoot = true) {
         value = value.trim();
     }
     value = normalizeMathOperatorSpacing(value);
+    return value;
+}
+function normalizeAttributeSelectors(value) {
+    // Wrap values in attribute selectors with quotes
+    if (value.includes("=")) {
+        value = value.replace(/(=.*)/g, (_fullMatch, match)=>{
+            if (match[1] === "'" || match[1] === '"') {
+                return match;
+            }
+            // Handle regex flags on unescaped values
+            if (match.length > 2) {
+                let trailingCharacter = match[match.length - 1];
+                if (match[match.length - 2] === " " && (trailingCharacter === "i" || trailingCharacter === "I" || trailingCharacter === "s" || trailingCharacter === "S")) {
+                    return `="${match.slice(1, -2)}" ${match[match.length - 1]}`;
+                }
+            }
+            return `="${match.slice(1)}"`;
+        });
+    }
     return value;
 }
 /**
@@ -140,7 +168,14 @@ function normalize(value, context = null, isRoot = true) {
         "keyboard-inset-bottom",
         "keyboard-inset-left",
         "keyboard-inset-width",
-        "keyboard-inset-height"
+        "keyboard-inset-height",
+        "radial-gradient",
+        "linear-gradient",
+        "conic-gradient",
+        "repeating-radial-gradient",
+        "repeating-linear-gradient",
+        "repeating-conic-gradient",
+        "anchor-size"
     ];
     return value.replace(/(calc|min|max|clamp)\(.+\)/g, (match)=>{
         let result = "";
@@ -185,6 +220,10 @@ function normalize(value, context = null, isRoot = true) {
             } else if (preventFormattingInFunctions.some((fn)=>peek(fn))) {
                 result += consumeUntil([
                     ")"
+                ]);
+            } else if (peek("[")) {
+                result += consumeUntil([
+                    "]"
                 ]);
             } else if ([
                 "+",
@@ -390,7 +429,7 @@ let absoluteSizes = new Set([
     "medium",
     "large",
     "x-large",
-    "x-large",
+    "xx-large",
     "xxx-large"
 ]);
 function absoluteSize(value) {

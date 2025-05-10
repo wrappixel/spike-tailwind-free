@@ -2,7 +2,7 @@
     background: rgba(0, 0, 0, 0.5) !important;
 }
 .left-sidebar .scroll-sidebar {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 240px);
 }
 
 

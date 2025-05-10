@@ -1,108 +1,1096 @@
 <!-- ---------------------------------- -->
 <!-- Start Vertical Layout Sidebar -->
 <!-- ---------------------------------- -->
-<div class="p-4" >
+<div class="p-4">
   @@include("./logo-sidebar.html")
 </div>
 <div class="scroll-sidebar" data-simplebar="">
-    <nav class=" w-full flex flex-col sidebar-nav px-4 mt-5">
-      <ul  id="sidebarnav" class="text-gray-600 text-sm">
-        <li class="text-xs font-bold pb-[5px]">
-          <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
-          <span class="text-xs text-gray-400 font-semibold">HOME</span>
-        </li>
+  <nav class=" w-full flex flex-col sidebar-nav px-4 mt-5">
+    <ul id="sidebarnav" class="text-gray-600 text-sm">
+      <li class="text-xs font-bold pb-[5px]">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">HOME</span>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base  flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/index.html"
-           >
-            <i class="ti ti-layout-dashboard ps-2  text-2xl"></i> <span>Dashboard</span>
-          </a>
-        </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base  flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/index.html">
+          <i class="ti ti-layout-dashboard ps-2  text-2xl"></i> <span>Dashboard</span>
+        </a>
+      </li>
 
-        <li class="text-xs font-bold mb-4 mt-6">
-          <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
-          <span class="text-xs text-gray-400 font-semibold">UI COMPONENTS</span>
-        </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/index2.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-chart-bar ps-2 text-2xl"></i> <span>Dashboard 2</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/components/buttons.html"
-           >
-            <i class="ti ti-article ps-2 text-2xl"></i> <span>Buttons</span>
-          </a>
-        </li>
+      <li class="text-xs font-bold mb-4 mt-6">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">UI COMPONENTS</span>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/components/alerts.html"
-           >
-            <i class="ti ti-alert-circle ps-2 text-2xl"></i> <span>Alerts</span>
-          </a>
-        </li>        
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/components/buttons.html">
+          <i class="ti ti-article ps-2 text-2xl"></i> <span>Buttons</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/components/cards.html"
-           >
-            <i class="ti ti-cards ps-2 text-2xl"></i> <span>Card</span>
-          </a>
-        </li>   
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/components/alerts.html">
+          <i class="ti ti-alert-circle ps-2 text-2xl"></i> <span>Alerts</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/components/forms.html"
-           >
-            <i class="ti ti-file-description ps-2 text-2xl"></i> <span>Forms</span>
-          </a>
-        </li> 
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/components/cards.html">
+          <i class="ti ti-cards ps-2 text-2xl"></i> <span>Card</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/components/typography.html"
-           >
-            <i class="ti ti-typography ps-2 text-2xl"></i> <span>Typography</span>
-          </a>
-        </li>   
-        
-        <li class="text-xs font-bold mb-4 mt-8">
-          <i class="ti ti-dots nav-small-cap-icon  text-lg hidden text-center"></i>
-          <span class="text-xs text-gray-400 font-semibold">AUTH</span>
-        </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/components/forms.html">
+          <i class="ti ti-file-description ps-2 text-2xl"></i> <span>Forms</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/pages/authentication-login.html"
-           >
-            <i class="ti ti-login ps-2 text-2xl"></i> <span>Login</span>
-          </a>
-        </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/components/typography.html">
+          <i class="ti ti-typography ps-2 text-2xl"></i> <span>Typography</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/pages/authentication-register.html"
-           >
-            <i class="ti ti-user-plus ps-2 text-2xl"></i> <span>Register</span>
-          </a>
-        </li>  
+      <li class="text-xs font-bold mb-4 mt-6">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">APPS</span>
+      </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-ecommerce">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-ecommerce">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-basket ps-2 text-2xl"></i>
+              <span>Ecommerce</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-ecommerce"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-ecommerce">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/eco-shop.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Shop One</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/eco-shop2.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Shop Two</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/eco-shop-detail.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Details One</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/eco-shop-detail2.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Details Two</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/eco-product-list.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>List</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/eco-checkout.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Checkout</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-        <li class="text-xs font-bold mb-4 mt-8">
-          <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
-          <span class="text-xs text-gray-400 font-semibold">EXTRA</span>
-        </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-userprofile">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-userprofile">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-user-circle ps-2 text-2xl"></i>
+              <span>User Profile</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-userprofile"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-userprofile">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/page-user-profile.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Profile One</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/page-user-profile2.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Profile Two</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/pages/icons.html"
-           >
-            <i class="ti ti-mood-happy ps-2 text-2xl"></i> <span>Icons</span>
-          </a>
-        </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-blog">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-blog">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-chart-donut-3 ps-2 text-2xl"></i>
+              <span>Blog</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-blog"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-blog">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/blog-posts.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Posts</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/blog-detail.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Details</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-email.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-mail ps-2 text-2xl"></i> <span>Email</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-calendar.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-calendar ps-2 text-2xl"></i> <span>Calendar</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-kanban.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-layout-kanban ps-2 text-2xl"></i> <span>Kanban</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-chat.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-message-dots ps-2 text-2xl"></i> <span>Chat</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-notes.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-notes ps-2 text-2xl"></i> <span>Notes</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-contact.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-phone ps-2 text-2xl"></i> <span>Contact</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-contact2.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-list-details ps-2 text-2xl"></i> <span>Contact List</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/app-invoice.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-file-text ps-2 text-2xl"></i> <span>Invoice</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full" href="@@webRoot/pages/sample-page.html"
-           >
-            <i class="ti ti-aperture ps-2 text-2xl"></i> <span>Sample Page</span>
-          </a>
-        </li>        
+      <li class="text-xs font-bold mb-4 mt-6">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">Pages</span>
+      </li>
 
-      </ul>
-    </nav>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/page-pricing.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-currency-dollar ps-2 text-2xl"></i> <span>Pricing</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/page-faq.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-help ps-2 text-2xl"></i> <span>FAQ</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/page-account-settings.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-user-circle ps-2 text-2xl"></i> <span>Account Setting</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/landingpage/index.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-app-window ps-2 text-2xl"></i> <span>Landing Page</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-widgets">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-widgets">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-layout ps-2 text-2xl"></i>
+              <span>Widgets</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-widgets"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-widgets">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/widgets-cards.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Cards</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/widgets-banners.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Banners</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/widgets-charts.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Charts</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/widgets-feeds.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Feeds Widgets</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/widgets-apps.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Apps Widgets</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/widgets-data.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Data Widgets</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <li class="text-xs font-bold mb-4 mt-6">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">UI</span>
+      </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-uielements">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-uielements">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-layout-grid ps-2 text-2xl"></i>
+              <span>Ui Elements</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-uielements"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-uielements">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-accordion.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Accordion</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-badge.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Badges</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-button.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Buttons</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-breadcrumb.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Breadcrumb</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-carousel.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Carousel</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-chat-bubbles.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Chat Bubbles</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-dropdowns.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Dropdowns</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-datepicker.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>DatePicker</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-devices.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>devices</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-grid.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Grid</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-lists.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>List</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-link.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Link</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-modals.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Modals</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-notification.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Notification</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-offcanvas.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Offcanvas</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-progressbar.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Progress Bar</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-pagination.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Pagination</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-ratings.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Ratings</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-scrollspy.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Scrollspy</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-spinner.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Spinner</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-stepper.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Stepper</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-skeleton.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Skeleton</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-tab.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Tab</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-typography.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Typography</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-tooltip-popover.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Tooltip</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-timeline.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Timeline</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-toasts.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Toasts</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-cards">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-cards">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-cards ps-2 text-2xl"></i>
+              <span>Cards</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-cards"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-cards">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-cards.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Base Cards</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-card-customs.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Customs Cards</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/ui-card-weather.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Weather Cards</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <li class="text-xs font-bold mb-4 mt-6">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">FORMS</span>
+      </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-formelements">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-formelements">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-file-text ps-2 text-2xl"></i>
+              <span>Form Elements</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-formelements"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-formelements">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/form-inputs.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Form Input</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/form-input-groups.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Input Groups</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/form-checkbox-radio.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Checkbox & Radios</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/form-input-grid.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Input Grid</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/form-input-number.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Input Number</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/form-advanced-password.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Advanced Pass</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <li class="text-xs font-bold mb-4 mt-6">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">TABLES</span>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/table-basic.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-table ps-2 text-2xl"></i> <span>Basic</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/table-layout-highlighted.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-table-row ps-2 text-2xl"></i> <span>Highlighted</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/table-miscellaneous.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-border-all ps-2 text-2xl"></i> <span>Miscellaneous</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/table-editable.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-table-column ps-2 text-2xl"></i> <span>Editable</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+
+      <li class="text-xs font-bold mb-4 mt-8">
+        <i class="ti ti-dots nav-small-cap-icon  text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">DATA TABLES</span>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/table-datatable-basic.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-air-conditioning-disabled ps-2 text-2xl"></i> <span>Datatable</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+
+      <li class="text-xs font-bold mb-4 mt-8">
+        <i class="ti ti-dots nav-small-cap-icon  text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">CHARTS</span>
+      </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-apexcharts">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-apexcharts">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-chart-pie ps-2 text-2xl"></i>
+              <span>Apex Charts</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-apexcharts"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-apexcharts">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/chart-apex-line.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Line Chart</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/chart-apex-area.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Area Chart</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/chart-apex-bar.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Bar Chart</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/chart-apex-pie.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Pie Chart</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/chart-apex-radial.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Radial Chart</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/chart-apex-radar.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Radar Chart</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <li class="text-xs font-bold mb-4 mt-8">
+        <i class="ti ti-dots nav-small-cap-icon  text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">AUTH</span>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-error.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-alert-circle ps-2 text-2xl"></i> <span>Error</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/pages/authentication-login.html">
+          <i class="ti ti-login ps-2 text-2xl"></i> <span>Boxed Login</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-login.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-login ps-2 text-2xl"></i> <span>Side Login</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/pages/authentication-register.html">
+          <i class="ti ti-user-plus ps-2 text-2xl"></i> <span>Boxed Register</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-register.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-user-plus ps-2 text-2xl"></i> <span>Side Register</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-forgotpassword">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-forgotpassword">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-rotate ps-2 text-2xl"></i>
+              <span>Forgot Password</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-forgotpassword"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-forgotpassword">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-forgot-password.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Side Forgot Pwd</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-forgot-password2.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Boxed Forgot Pwd</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hs-accordion-group">
+        <div class="hs-accordion sidebar-item" id="hs-basic-with-title-and-arrow-stretched-heading-twosteps">
+          <button
+            class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center relative  rounded-md text-gray-500  w-full hs-accordion-toggle hs-accordion-active:text-blue-600 justify-between"
+            aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-twosteps">
+            <div class="flex items-center gap-3">
+              <i class="ti ti-zoom-code ps-2 text-2xl"></i>
+              <span>Two Steps</span>
+            </div>
+            <div class="mr-5">
+              <svg class="hs-accordion-active:hidden block size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="hs-basic-with-title-and-arrow-stretched-collapse-twosteps"
+            class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+            aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-twosteps">
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-two-steps.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Side Two Steps</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+            <a class="gap-4 py-2.5 my-1 px-[14px] text-sm flex items-center justify-between relative  rounded-md text-gray-500  w-full"
+              target="_blank"
+              href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-two-steps2.html">
+              <div class="flex items-center gap-4">
+                <i class="ti ti-circle text-xs"></i> <span>Boxed Two Steps</span>
+              </div>
+              <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5">Pro</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank"
+          href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/authentication-maintenance.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-settings ps-2 text-2xl"></i> <span>Maintenance</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+
+      <li class="text-xs font-bold mb-4 mt-8">
+        <i class="ti ti-dots nav-small-cap-icon text-lg hidden text-center"></i>
+        <span class="text-xs text-gray-400 font-semibold">EXTRA</span>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base flex items-center justify-between relative rounded-md text-gray-500 w-full"
+          target="_blank" href="https://bootstrapdemos.wrappixel.com/spike-tailwind/dist/main/icon-solar.html">
+          <div class="flex items-center gap-2">
+            <i class="ti ti-mood-happy ps-2 text-2xl"></i> <span>Solar Icons</span>
+          </div>
+          <span class="text-white bg-blue-700 rounded-3xl px-2 text-xs py-0.5 mr-5">Pro</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/pages/icons.html">
+          <i class="ti ti-mood-happy ps-2 text-2xl"></i> <span>Tabler Icons</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item">
+        <a class="sidebar-link gap-3 py-2.5 my-1 text-base   flex items-center relative  rounded-md text-gray-500  w-full"
+          href="@@webRoot/pages/sample-page.html">
+          <i class="ti ti-aperture ps-2 text-2xl"></i> <span>Sample Page</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
 </div>
 
 <!-- Bottom Upgrade Option -->
-<div class="m-4  relative grid">
-  <button class="text-base font-semibold hover:bg-blue-700 btn">Upgrade to Pro</button>
+<div class="m-4 relative grid">
+  <a href="https://www.wrappixel.com/templates/spike-tailwind-admin-template/?ref=376" target="_blank"
+    class="text-base font-semibold hover:bg-blue-700 btn">Upgrade to Pro</a>
 </div>
 <!-- </aside> -->

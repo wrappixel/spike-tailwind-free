@@ -267,15 +267,15 @@ let variantPlugins = {
         }
     },
     directionVariants: ({ addVariant  })=>{
-        addVariant("ltr", ':is(:where([dir="ltr"]) &)');
-        addVariant("rtl", ':is(:where([dir="rtl"]) &)');
+        addVariant("ltr", '&:where([dir="ltr"], [dir="ltr"] *)');
+        addVariant("rtl", '&:where([dir="rtl"], [dir="rtl"] *)');
     },
     reducedMotionVariants: ({ addVariant  })=>{
         addVariant("motion-safe", "@media (prefers-reduced-motion: no-preference)");
         addVariant("motion-reduce", "@media (prefers-reduced-motion: reduce)");
     },
     darkVariants: ({ config , addVariant  })=>{
-        let [mode, className = ".dark"] = [].concat(config("darkMode", "media"));
+        let [mode, selector = ".dark"] = [].concat(config("darkMode", "media"));
         if (mode === false) {
             mode = "media";
             _log.default.warn("darkmode-false", [
@@ -284,10 +284,48 @@ let variantPlugins = {
                 "https://tailwindcss.com/docs/upgrade-guide#remove-dark-mode-configuration"
             ]);
         }
-        if (mode === "class") {
-            addVariant("dark", `:is(:where(${className}) &)`);
+        if (mode === "variant") {
+            let formats;
+            if (Array.isArray(selector)) {
+                formats = selector;
+            } else if (typeof selector === "function") {
+                formats = selector;
+            } else if (typeof selector === "string") {
+                formats = [
+                    selector
+                ];
+            }
+            // TODO: We could also add these warnings if the user passes a function that returns string | string[]
+            // But this is an advanced enough use case that it's probably not necessary
+            if (Array.isArray(formats)) {
+                for (let format of formats){
+                    if (format === ".dark") {
+                        mode = false;
+                        _log.default.warn("darkmode-variant-without-selector", [
+                            "When using `variant` for `darkMode`, you must provide a selector.",
+                            'Example: `darkMode: ["variant", ".your-selector &"]`'
+                        ]);
+                    } else if (!format.includes("&")) {
+                        mode = false;
+                        _log.default.warn("darkmode-variant-without-ampersand", [
+                            "When using `variant` for `darkMode`, your selector must contain `&`.",
+                            'Example `darkMode: ["variant", ".your-selector &"]`'
+                        ]);
+                    }
+                }
+            }
+            selector = formats;
+        }
+        if (mode === "selector") {
+            // New preferred behavior
+            addVariant("dark", `&:where(${selector}, ${selector} *)`);
         } else if (mode === "media") {
             addVariant("dark", "@media (prefers-color-scheme: dark)");
+        } else if (mode === "variant") {
+            addVariant("dark", selector);
+        } else if (mode === "class") {
+            // Old behavior
+            addVariant("dark", `&:is(${selector} *)`);
         }
     },
     printVariant: ({ addVariant  })=>{
@@ -405,7 +443,7 @@ let variantPlugins = {
         matchVariant("supports", (value = "")=>{
             let check = (0, _dataTypes.normalize)(value);
             let isRaw = /^\w*\s*\(/.test(check);
-            // Chrome has a bug where `(condtion1)or(condition2)` is not valid
+            // Chrome has a bug where `(condition1)or(condition2)` is not valid
             // But `(condition1) or (condition2)` is supported.
             check = isRaw ? check.replace(/\b(and|or|not)\b/g, " $1 ") : check;
             if (isRaw) {
@@ -422,42 +460,51 @@ let variantPlugins = {
             values: (_theme = theme("supports")) !== null && _theme !== void 0 ? _theme : {}
         });
     },
-    hasVariants: ({ matchVariant  })=>{
+    hasVariants: ({ matchVariant , prefix  })=>{
         matchVariant("has", (value)=>`&:has(${(0, _dataTypes.normalize)(value)})`, {
-            values: {}
+            values: {},
+            [_setupContextUtils.INTERNAL_FEATURES]: {
+                respectPrefix: false
+            }
         });
-        matchVariant("group-has", (value, { modifier  })=>modifier ? `:merge(.group\\/${modifier}):has(${(0, _dataTypes.normalize)(value)}) &` : `:merge(.group):has(${(0, _dataTypes.normalize)(value)}) &`, {
-            values: {}
+        matchVariant("group-has", (value, { modifier  })=>modifier ? `:merge(${prefix(".group")}\\/${modifier}):has(${(0, _dataTypes.normalize)(value)}) &` : `:merge(${prefix(".group")}):has(${(0, _dataTypes.normalize)(value)}) &`, {
+            values: {},
+            [_setupContextUtils.INTERNAL_FEATURES]: {
+                respectPrefix: false
+            }
         });
-        matchVariant("peer-has", (value, { modifier  })=>modifier ? `:merge(.peer\\/${modifier}):has(${(0, _dataTypes.normalize)(value)}) ~ &` : `:merge(.peer):has(${(0, _dataTypes.normalize)(value)}) ~ &`, {
-            values: {}
+        matchVariant("peer-has", (value, { modifier  })=>modifier ? `:merge(${prefix(".peer")}\\/${modifier}):has(${(0, _dataTypes.normalize)(value)}) ~ &` : `:merge(${prefix(".peer")}):has(${(0, _dataTypes.normalize)(value)}) ~ &`, {
+            values: {},
+            [_setupContextUtils.INTERNAL_FEATURES]: {
+                respectPrefix: false
+            }
         });
     },
     ariaVariants: ({ matchVariant , theme  })=>{
         var _theme;
-        matchVariant("aria", (value)=>`&[aria-${(0, _dataTypes.normalize)(value)}]`, {
+        matchVariant("aria", (value)=>`&[aria-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}]`, {
             values: (_theme = theme("aria")) !== null && _theme !== void 0 ? _theme : {}
         });
         var _theme1;
-        matchVariant("group-aria", (value, { modifier  })=>modifier ? `:merge(.group\\/${modifier})[aria-${(0, _dataTypes.normalize)(value)}] &` : `:merge(.group)[aria-${(0, _dataTypes.normalize)(value)}] &`, {
+        matchVariant("group-aria", (value, { modifier  })=>modifier ? `:merge(.group\\/${modifier})[aria-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] &` : `:merge(.group)[aria-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] &`, {
             values: (_theme1 = theme("aria")) !== null && _theme1 !== void 0 ? _theme1 : {}
         });
         var _theme2;
-        matchVariant("peer-aria", (value, { modifier  })=>modifier ? `:merge(.peer\\/${modifier})[aria-${(0, _dataTypes.normalize)(value)}] ~ &` : `:merge(.peer)[aria-${(0, _dataTypes.normalize)(value)}] ~ &`, {
+        matchVariant("peer-aria", (value, { modifier  })=>modifier ? `:merge(.peer\\/${modifier})[aria-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] ~ &` : `:merge(.peer)[aria-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] ~ &`, {
             values: (_theme2 = theme("aria")) !== null && _theme2 !== void 0 ? _theme2 : {}
         });
     },
     dataVariants: ({ matchVariant , theme  })=>{
         var _theme;
-        matchVariant("data", (value)=>`&[data-${(0, _dataTypes.normalize)(value)}]`, {
+        matchVariant("data", (value)=>`&[data-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}]`, {
             values: (_theme = theme("data")) !== null && _theme !== void 0 ? _theme : {}
         });
         var _theme1;
-        matchVariant("group-data", (value, { modifier  })=>modifier ? `:merge(.group\\/${modifier})[data-${(0, _dataTypes.normalize)(value)}] &` : `:merge(.group)[data-${(0, _dataTypes.normalize)(value)}] &`, {
+        matchVariant("group-data", (value, { modifier  })=>modifier ? `:merge(.group\\/${modifier})[data-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] &` : `:merge(.group)[data-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] &`, {
             values: (_theme1 = theme("data")) !== null && _theme1 !== void 0 ? _theme1 : {}
         });
         var _theme2;
-        matchVariant("peer-data", (value, { modifier  })=>modifier ? `:merge(.peer\\/${modifier})[data-${(0, _dataTypes.normalize)(value)}] ~ &` : `:merge(.peer)[data-${(0, _dataTypes.normalize)(value)}] ~ &`, {
+        matchVariant("peer-data", (value, { modifier  })=>modifier ? `:merge(.peer\\/${modifier})[data-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] ~ &` : `:merge(.peer)[data-${(0, _dataTypes.normalizeAttributeSelectors)((0, _dataTypes.normalize)(value))}] ~ &`, {
             values: (_theme2 = theme("data")) !== null && _theme2 !== void 0 ? _theme2 : {}
         });
     },
@@ -756,7 +803,9 @@ let corePlugins = {
                 "gridColumnStart"
             ]
         ]
-    ]),
+    ], {
+        supportsNegativeValues: true
+    }),
     gridColumnEnd: (0, _createUtilityPlugin.default)("gridColumnEnd", [
         [
             "col-end",
@@ -764,7 +813,9 @@ let corePlugins = {
                 "gridColumnEnd"
             ]
         ]
-    ]),
+    ], {
+        supportsNegativeValues: true
+    }),
     gridRow: (0, _createUtilityPlugin.default)("gridRow", [
         [
             "row",
@@ -780,7 +831,9 @@ let corePlugins = {
                 "gridRowStart"
             ]
         ]
-    ]),
+    ], {
+        supportsNegativeValues: true
+    }),
     gridRowEnd: (0, _createUtilityPlugin.default)("gridRowEnd", [
         [
             "row-end",
@@ -788,7 +841,9 @@ let corePlugins = {
                 "gridRowEnd"
             ]
         ]
-    ]),
+    ], {
+        supportsNegativeValues: true
+    }),
     float: ({ addUtilities  })=>{
         addUtilities({
             ".float-start": {
@@ -1984,15 +2039,6 @@ let corePlugins = {
         matchUtilities({
             "space-x": (value)=>{
                 value = value === "0" ? "0px" : value;
-                if (false) {
-                    return {
-                        "& > :not([hidden]) ~ :not([hidden])": {
-                            "--tw-space-x-reverse": "0",
-                            "margin-inline-end": `calc(${value} * var(--tw-space-x-reverse))`,
-                            "margin-inline-start": `calc(${value} * calc(1 - var(--tw-space-x-reverse)))`
-                        }
-                    };
-                }
                 return {
                     "& > :not([hidden]) ~ :not([hidden])": {
                         "--tw-space-x-reverse": "0",
@@ -2028,16 +2074,6 @@ let corePlugins = {
         matchUtilities({
             "divide-x": (value)=>{
                 value = value === "0" ? "0px" : value;
-                if (false) {
-                    return {
-                        "& > :not([hidden]) ~ :not([hidden])": {
-                            "@defaults border-width": {},
-                            "--tw-divide-x-reverse": "0",
-                            "border-inline-end-width": `calc(${value} * var(--tw-divide-x-reverse))`,
-                            "border-inline-start-width": `calc(${value} * calc(1 - var(--tw-divide-x-reverse)))`
-                        }
-                    };
-                }
                 return {
                     "& > :not([hidden]) ~ :not([hidden])": {
                         "@defaults border-width": {},
@@ -3654,6 +3690,9 @@ let corePlugins = {
             ".mix-blend-luminosity": {
                 "mix-blend-mode": "luminosity"
             },
+            ".mix-blend-plus-darker": {
+                "mix-blend-mode": "plus-darker"
+            },
             ".mix-blend-plus-lighter": {
                 "mix-blend-mode": "plus-lighter"
             }
@@ -3667,7 +3706,7 @@ let corePlugins = {
             `var(--tw-shadow)`
         ].join(", ");
         return function({ matchUtilities , addDefaults , theme  }) {
-            addDefaults(" box-shadow", {
+            addDefaults("box-shadow", {
                 "--tw-ring-offset-shadow": "0 0 #0000",
                 "--tw-ring-shadow": "0 0 #0000",
                 "--tw-shadow": "0 0 #0000",
@@ -3890,7 +3929,7 @@ let corePlugins = {
         matchUtilities({
             blur: (value)=>{
                 return {
-                    "--tw-blur": `blur(${value})`,
+                    "--tw-blur": value.trim() === "" ? " " : `blur(${value})`,
                     "@defaults filter": {},
                     filter: cssFilterValue
                 };
@@ -4030,8 +4069,9 @@ let corePlugins = {
         matchUtilities({
             "backdrop-blur": (value)=>{
                 return {
-                    "--tw-backdrop-blur": `blur(${value})`,
+                    "--tw-backdrop-blur": value.trim() === "" ? " " : `blur(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4045,6 +4085,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-brightness": `brightness(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4058,6 +4099,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-contrast": `contrast(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4071,6 +4113,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-grayscale": `grayscale(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4084,6 +4127,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-hue-rotate": `hue-rotate(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4098,6 +4142,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-invert": `invert(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4111,6 +4156,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-opacity": `opacity(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4124,6 +4170,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-saturate": `saturate(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4137,6 +4184,7 @@ let corePlugins = {
                 return {
                     "--tw-backdrop-sepia": `sepia(${value})`,
                     "@defaults backdrop-filter": {},
+                    "-webkit-backdrop-filter": cssBackdropFilterValue,
                     "backdrop-filter": cssBackdropFilterValue
                 };
             }
@@ -4159,9 +4207,11 @@ let corePlugins = {
         addUtilities({
             ".backdrop-filter": {
                 "@defaults backdrop-filter": {},
+                "-webkit-backdrop-filter": cssBackdropFilterValue,
                 "backdrop-filter": cssBackdropFilterValue
             },
             ".backdrop-filter-none": {
+                "-webkit-backdrop-filter": "none",
                 "backdrop-filter": "none"
             }
         });
@@ -4219,6 +4269,51 @@ let corePlugins = {
             ]
         ]
     ]),
+    contain: ({ addDefaults , addUtilities  })=>{
+        let cssContainValue = "var(--tw-contain-size) var(--tw-contain-layout) var(--tw-contain-paint) var(--tw-contain-style)";
+        addDefaults("contain", {
+            "--tw-contain-size": " ",
+            "--tw-contain-layout": " ",
+            "--tw-contain-paint": " ",
+            "--tw-contain-style": " "
+        });
+        addUtilities({
+            ".contain-none": {
+                contain: "none"
+            },
+            ".contain-content": {
+                contain: "content"
+            },
+            ".contain-strict": {
+                contain: "strict"
+            },
+            ".contain-size": {
+                "@defaults contain": {},
+                "--tw-contain-size": "size",
+                contain: cssContainValue
+            },
+            ".contain-inline-size": {
+                "@defaults contain": {},
+                "--tw-contain-size": "inline-size",
+                contain: cssContainValue
+            },
+            ".contain-layout": {
+                "@defaults contain": {},
+                "--tw-contain-layout": "layout",
+                contain: cssContainValue
+            },
+            ".contain-paint": {
+                "@defaults contain": {},
+                "--tw-contain-paint": "paint",
+                contain: cssContainValue
+            },
+            ".contain-style": {
+                "@defaults contain": {},
+                "--tw-contain-style": "style",
+                contain: cssContainValue
+            }
+        });
+    },
     content: (0, _createUtilityPlugin.default)("content", [
         [
             "content",
