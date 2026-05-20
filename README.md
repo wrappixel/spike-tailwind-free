@@ -1,14 +1,13 @@
 ## Spike Tailwind CSS Admin Dashboard Template
-[Live Preview](https://spike-nextjs-free.vercel.app/) | [Download](https://www.wrappixel.com/templates/spike-free-tailwind-admin-template/) | [More Tailwind Admin Dashboards](https://www.wrappixel.com/templates/category/tailwind-dashboard/)
+[Live Preview](https://spike-nextjs-free.vercel.app/) | [Download](https://wrappixel.com/templates/spike-free-tailwind-admin-template/) | [More Tailwind Admin Dashboards](https://wrappixel.com/templates/category/tailwind-dashboard/)
 
 
 <!-- Main image of Template -->
-<a target="_blank" href="https://www.wrappixel.com/templates/spike-next-js-free-admin-template/">
-  <img src="https://www.wrappixel.com/wp-content/uploads/edd/2024/01/spike-free-tailwind.jpg" />
+<a target="_blank" href="https://wrappixel.com/templates/spike-free-tailwind-admin-template">
+  <img src="https://images.wrappixel.com/templates/free/spike/spike-free-tailwind.webp" />
 </a>
 
 If you're a Tailwind CSS developer searching for the perfect starting point for your project, look no further! Spike Admin Template is designed to help you hit the ground running with a clean, modern, and efficient codebase. It's built with HTML5, Preline UI & jQuery providing a collection of pre-built components and pages to help you set up your admin interface quickly.
-</p>
 
 #### Stay Tuned for Spike Admin Dashboard Updates
 
